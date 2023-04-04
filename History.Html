@@ -24,11 +24,10 @@
             font-family: 'Courier New', Courier, monospace;
             font-weight: lighter;
         }
-        
+
         body {
-        background-color: lightblue;
-        }
-      
+  background-color: lightblue;
+}
       
 .header {
     width: 100%;
@@ -137,6 +136,87 @@ p {
   
     <p> One part of Devon's history is the Scone. But cream or jam first? </p>
 
+<div class="image-grid">
+    <img class="image-grid-col-2 image-grid-row-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Tarr_Steps_01.jpg/1200px-Tarr_Steps_01.jpg" alt="Exmoor National Park">
+    <img src="https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blt06d39f5cafda8def/6139e2be3e034728ba01634d/UK_Dartmouth_UK_Header.jpg" alt="Dartmouth">
+    <img src="https://eu-assets.simpleview-europe.com/devon2016/imageresizer/?image=%2Fdbimgs%2Fplym%20new.jpg&action=FeaturedItemsScrollFullWidth3x2" alt="Plymouth">
+    <img src="https://i.guim.co.uk/img/media/c6da0ed377209f514f996057f70f914ed267d361/0_127_1452_871/master/1452.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=eab040e7434dd8a276faf197656d8f96" alt="Exeter">
+    <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/32E1/production/_118052031_gettyimages-1288024865.jpg" alt="Dartmouth">
+    <img class="image-grid-col-2 image-grid-row-2" src="https://www.thebestofexmoor.co.uk/blog/wp-content/uploads/2017/10/south-west-coast-path.jpg" alt="Exmoor National Park">
+</div>
+
+              <title>Draggable Image</title>
+              <style>
+                #drag-image {
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  cursor: move;
+                }
+              </style>
+            </head>
+            <body>
+              <img id="drag-image" src="https://www.seriouseats.com/thmb/NxEP0qg7TR93weM_mGJ3dFb2ib4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Cream-Vs-Jam-Hero-UPdated-0bd8344044ce4c998a38325cbc6870f3.jpg" width="300" alt="Draggable Image">
+              
+              <script>
+                var dragItem = document.querySelector("#drag-image");
+                var container = document.body;
+                var active = false;
+                var currentX;
+                var currentY;
+                var initialX;
+                var initialY;
+                var xOffset = 0;
+                var yOffset = 0;
+            
+                container.addEventListener("mousedown", dragStart);
+                container.addEventListener("mouseup", dragEnd);
+                container.addEventListener("mousemove", drag);
+            
+                function dragStart(e) {
+                  initialX = e.clientX - xOffset;
+                  initialY = e.clientY - yOffset;
+            
+                  if (e.target === dragItem) {
+                    active = true;
+                  }
+                }
+            
+                function dragEnd(e) {
+                  initialX = currentX;
+                  initialY = currentY;
+            
+                  active = false;
+                }
+            
+                function drag(e) {
+                  if (active) {
+                    e.preventDefault();
+            
+                    currentX = e.clientX - initialX;
+                    currentY = e.clientY - initialY;
+            
+                    xOffset = currentX;
+                    yOffset = currentY;
+            
+                    setTranslate(currentX, currentY, dragItem);
+                  }
+                }
+            
+                function setTranslate(xPos, yPos, el) {
+                  el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+                }
+              </script>
+            </body>
+            </html>
+            
+
+var img = document.getElementById("myImage");
+img.addEventListener("dragstart", dragStart);
+
+function dragStart(event) {
+  event.dataTransfer.setData("text/plain", event.target.id);
+}
 
 <script>
   alert("Welcome to our page. On here you were learn about Devon and what it has to offer!");
@@ -144,3 +224,4 @@ p {
 </body>
 <footer></footer>
 </html>
+
