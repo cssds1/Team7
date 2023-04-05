@@ -24,7 +24,19 @@
             font-family: 'Courier New', Courier, monospace;
             font-weight: lighter;
         }
-      
+        p {
+            font-family: 'Alkatra', cursive;
+            font-family: 'Gruppo', cursive; 
+            font-size: 20px;
+            padding: 10px;
+}
+        li {
+            font-family: 'Alkatra', cursive;
+            font-family: 'Gruppo', cursive; 
+            font-size: 16px;
+            padding: 8px;
+            text-align: center;
+        }
 .header {
     width: 100%;
     height: 60px;
@@ -78,13 +90,6 @@
     display:block;
     height: 600px;
 }
-
-p {
-    font-family: 'Alkatra', cursive;
-    font-family: 'Gruppo', cursive; 
-    font-size: 24px;
-    padding: 60px;
-}
 .image-grid {
     --gap: 16px;
     --num-cols: 4;
@@ -132,13 +137,14 @@ p {
 
     <a class="mainPhoto" href="https://www.telegraph.co.uk/content/dam/travel/2022/08/24/TELEMMGLPICT000306541326_trans_NvBQzQNjv4BqRo0U4xU-30oDveS4pXV-Vv4Xpit_DMGvdp2n7FDd82k.jpeg"></a>
   
-<p>Devon: a popular holiday destination. </p>
+<p>Devon: a popular holiday destination. Found in the Southwest of England, Devon provides visitors with an array of activities, experiences and beautiful scenery.</p>
 <li>spectacular coastline</li>
 <li>Beautiful beaches</li>
 <li>Fossil cliffs</li>
 <li>Medieval towns</li>
 <li>Moorland national parks</li>
 <li>and of course - Cornish Pasty</li>
+<br>
 
 <div class="image-grid">
     <img class="image-grid-col-2 image-grid-row-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Tarr_Steps_01.jpg/1200px-Tarr_Steps_01.jpg" alt="Exmoor National Park">
@@ -150,6 +156,16 @@ p {
 </div>
 <script>
   alert("Welcome to our page. On here you were learn about Devon and what it has to offer!");
+    
+let sign = prompt("Have you been to Devon?");
+
+if (sign.toLowerCase() === "yes") {
+
+  alert("You need to go back!");
+}
+if (sign.toLowerCase() === "no") {
+  alert("You need to go!");
+}
 </script>
 </body>
 <footer></footer>
