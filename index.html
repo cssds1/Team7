@@ -131,6 +131,18 @@
                    <a href="#"><li>Map</li></a> 
                    <a href="#"><li>Contact Us</li></a>  
                 </ul>
+                
+                
+                <nav>
+  <ul>
+    {% for item in site.navigation %}
+      <li>
+        <a href="{{ history.html }}">{{ History }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+                
             </div>
         </div>
 
