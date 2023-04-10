@@ -126,23 +126,13 @@
                     <h1>Welcome to <span>Devon</span></h1>
                 </div>
                 <ul class="navigation">
-                   <a href="docs/index.html"><li>Home</li></a>
-                   <a href="docs/history.html"><li>History</li></a> 
+                   <a href="{{index.html}}"><li>Home</li></a>
+                   <a href="{{history.html}}"><li>History</li></a> 
                    <a href="#"><li>Map</li></a> 
                    <a href="#"><li>Contact Us</li></a>  
                 </ul>
                 
-                
-                <nav>
-  <ul>
-    {% for item in site.navigation %}
-      <li>
-        <a href="{{history.html}}">{{ History }}</a>
-          <a href="{{index.html}}">{{ Home }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+        
                 
             </div>
         </div>
