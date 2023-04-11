@@ -1,0 +1,211 @@
+body {
+    padding: 0;
+    margin: 0;
+   
+}
+h1 {
+    margin-top: 50px;
+    margin-left: 510px;
+    font-size: 60px;
+    font-family: 'Alkatra', cursive;
+    font-family: 'Gruppo', cursive; 
+}
+h2 {
+    font-size: 40px;
+    font-family: 'Alkatra', cursive;
+    font-family: 'Gruppo', cursive; 
+    background-color: #FFB703;
+}
+h6 {
+    font-family: 'Alkatra', cursive;
+    font-family: 'Gruppo', cursive; 
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px;
+
+}
+p {
+    font-family: 'Alkatra', cursive;
+    font-family: 'Gruppo', cursive; 
+    font-size: 20px;
+    padding: 10px;
+}
+li {
+    font-family: 'Alkatra', cursive;
+    font-family: 'Gruppo', cursive; 
+    font-size: 20px;
+    padding: 8px;
+    text-align: center;
+}
+
+.header {
+width: 100%;
+height: 60px;
+display: block;
+background-color: rgb(255, 255, 255);
+}
+.inner_header {
+width: 1000px;
+height: 90%;
+display: block;
+margin: 0 auto;
+}
+.logo_container {
+height: 100%;
+display: table;
+float: left;
+}
+.logo_container h1 {
+color: rgb(0, 0, 0);
+height: 100%;
+display: table-cell;
+vertical-align: middle;
+font-family: 'Alkatra', cursive;
+font-family: 'Gruppo', cursive; 
+}
+.logo_container span {
+font-size: 46px;
+color: rgb(25, 110, 208);
+}
+.navigation {
+float: right;
+height: 100%;
+margin: 0 auto;
+}
+.navigation a {
+height: 100%;
+display: table;
+float: left;
+padding: 0px 20px;
+}
+.navigation a li {
+display: table-cell;
+vertical-align: middle;
+height: 100%;
+color: rgb(0, 0, 0);
+font-family: 'Roboto', sans-serif;
+font-size: 16px;
+}
+.navigation a li:hover {
+color: rgb(25, 110, 208);
+font-size: 22px;
+
+}
+.mainPhoto {
+background: left / cover url('https://www.telegraph.co.uk/content/dam/travel/2022/08/24/TELEMMGLPICT000306541326_trans_NvBQzQNjv4BqRo0U4xU-30oDveS4pXV-Vv4Xpit_DMGvdp2n7FDd82k.jpeg');
+display:block;
+height: 600px;
+}
+
+.image-grid {
+--gap: 16px;
+--num-cols: 4;
+--row-height: 300px;
+
+box-sizing: border-box;
+padding: var(--gap);
+display: grid;
+grid-template-columns: repeat var(--num-cols), 1fr;
+grid-auto-rows: var(--row-height);
+gap: var(--gap);
+}
+.image-grid > img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.image-grid-col-2 {
+grid-column: span 2;
+}
+.image-grid-row-2 {
+grid-column: span 2;
+}
+.exmoor {
+background-color: #b55214;
+padding: 20px 100px;
+border-radius: 40px;
+}
+.info {
+width: 600px;
+height: 300px;
+background: left / cover url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/04/10/20/bossington-landscape.jpg?w=600&h=400&s=1');
+transition: width 2s;
+text-align:center;
+}
+.info:hover {
+width: 1000px;
+}
+footer {
+text-align:center;
+padding: 5px;
+background-color:rgb(142, 179, 222);
+color: #000;
+}
+.container {
+position: relative;
+width: 50%;
+}
+
+.image {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+height: 100%;
+width: 100%;
+opacity: 0;
+transition: .8s ease;
+background-color: #d4e4e9;
+}
+
+.container:hover .overlay {
+opacity: 1;
+}
+
+.text {
+color: rgb(0, 0, 0);
+font-size: 20px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+}
+
+.Info1 {
+background-color: #C4D2D9;
+width: 50%;
+float: left;
+display: inline-block;
+height: 500px;
+}
+
+.Info2 {
+background-color: #C4D2D9;
+width: 50%;
+float: right;
+height: 500px;
+display: inline-block;
+}
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+background-color: #FFB703;
+}
+.img1 {
+float: left;
+}
+.img2 {
+float: right;
+}
+.video {
+text-align:center;
+}
